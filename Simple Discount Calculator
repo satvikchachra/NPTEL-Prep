@@ -1,0 +1,11 @@
+price = input("Enter price")
+p = int(price)
+discount = input("Enter discount percentage")
+d = int(discount)
+d = d/100
+deducted_Amt = d*p
+pay_Amt = p - deducted_Amt
+print("Dicount offered: Rs.",deducted_Amt)
+print("Pay amount: Rs.",pay_Amt) 
+
+
