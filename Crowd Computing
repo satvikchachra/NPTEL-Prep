@@ -17,8 +17,11 @@ for i in range(len(l)):
 md = statistics.median(l)
 
 plt.plot(persons,l,'r--')
+#actual value
 plt.plot(15,5500,'g^')
+#trimmed mean
 plt.plot(15,mn,'ro')
+#median
 plt.plot(15,md,'bs')
 plt.xlabel("Person No.")
 plt.ylabel("Estimates")
