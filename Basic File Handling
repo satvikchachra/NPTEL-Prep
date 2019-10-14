@@ -1,0 +1,5 @@
+
+with open("text_file_name.txt","r+") as myfile:
+    print(myfile.read())
+    myfile.write("data")
+myfile.close()
