@@ -1,0 +1,26 @@
+from scipy import stats
+import statistics
+import matplotlib.pyplot as plt
+
+l = [3000,4000,7500,5500,6000,3800,7000,4700,6500,5700,
+     9000,4300,8000,4700,6900,8000,2000,10000,4300,5500,
+     5000,3800,4900,5500,5000,4700,6000,6500,6700,8000]
+
+l.sort()
+#trimmed mean percentage trimmed here is 10%
+mn = stats.trim_mean(l,0.1)
+
+persons =[]
+for i in range(len(l)):
+  persons.append(i)
+
+md = statistics.median(l)
+
+plt.plot(persons,l,'r--')
+plt.plot(15,5500,'g^')
+plt.plot(15,mn,'ro')
+plt.plot(15,md,'bs')
+plt.xlabel("Person No.")
+plt.ylabel("Estimates")
+
+
