@@ -22,6 +22,7 @@ def magic_square(n):
     mat = n*n
     count = 1
     while(count<=mat):
+        #stay in boundary of matrix
         if(j==n and i == -1):
             i=0
             j=n-2
@@ -29,6 +30,7 @@ def magic_square(n):
             j=0
         elif(i<0):
             i=n-1
+        #if already placed
         if(ms[i][j]!=0):
             i = i+1
             j = j-2
@@ -51,6 +53,7 @@ def pr(n,ms):
         print()
 
 n = int(input("Enter the order of square matrix: "))
+#matrix constant
 m = int((n*((n*n)+1))/2)
 print("matrix constant = ",m)
 
